@@ -10,7 +10,6 @@ public class UserRegistrationValidate {
         boolean result = validator.validateFirstName("Anubhav");
         Assert.assertEquals(true, result);
     }
-
     @Test
     public void giveFirstName_WhenSort_shouldReturnFalse() {
         UserValidation validator = new UserValidation();
