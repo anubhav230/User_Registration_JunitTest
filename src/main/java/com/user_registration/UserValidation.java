@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class UserValidation {
     public static final String namePattern = "^[A-Z][a-z]{2,}";
-    public static final String emailPattern = "^[0-9a-zA-Z]+([. _ + -][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$";
+    public static final String emailPattern = "^[a-zA-Z0-9]+([._+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$";
     public static final String mobileNumberPattern = "^[0-9]{1,3}[ ][0-9]{10}$";
     public static final String passwordPatten = "[A-Z0-9a-z]*[!@#%^&]{1}[A-Z0-9a-z]*";
 
