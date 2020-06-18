@@ -76,21 +76,38 @@ public class UserRegistrationValidate {
     }
 
     @Test
-    public void givenPassword_WhenOneUppercase_ShouldReturnTrue() {
+    public void givenPassword_WhenOneUppercase_ShouldReturnFalse() {
         boolean result = validator.validPassword("Sdf123gh");
-        Assert.assertEquals(true, result);
+        Assert.assertEquals(false, result);
     }
 
     @Test
-    public void givenPassword_WhenAtLeastOneNumber_ShouldReturnTrue() {
+    public void givenPassword_WhenAtLeastOneNumber_ShouldReturnFalse() {
         boolean result = validator.validPassword("A1dffdgh");
-        Assert.assertEquals(true, result);
+        Assert.assertEquals(false, result);
     }
 
     @Test
-    public void givenPassword_WhenWithoutNumber_ShouldReturnTrue() {
+    public void givenPassword_WhenWithoutNumber_ShouldReturnFalse() {
         boolean result = validator.validPassword("Addffdgh");
         Assert.assertEquals(false, result);
+    }
+
+    @Test
+    public void givenPassword_WhenAtLeastOneSpacialCharacter_ShouldReturnTrue() {
+        boolean result = validator.validPassword("A@1ffdgh");
+        Assert.assertEquals(true, result);
+    }
+    @Test
+    public void givenPassword_WhenValidPassword2_ShouldReturnTrue() {
+        boolean result = validator.validPassword("A31f@dgh");
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
+    public void givenPassword_WhenValidPassword3_ShouldReturnTrue() {
+        boolean result = validator.validPassword("A2222#22");
+        Assert.assertEquals(true, result);
     }
 
 
