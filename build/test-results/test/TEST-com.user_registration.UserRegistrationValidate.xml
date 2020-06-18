@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.user_registration.UserRegistrationValidate" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-06-18T21:58:36" hostname="LAPTOP-GT6OG951" time="0.006">
+<testsuite name="com.user_registration.UserRegistrationValidate" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-06-18T22:10:59" hostname="LAPTOP-GT6OG951" time="0.013">
   <properties/>
   <testcase name="giveFirstName_WhenSort_shouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
-  <testcase name="givenEmailId_WhenInvalid_ShouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.002"/>
-  <testcase name="givenMobileNumber_WhenValid_ShouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
+  <testcase name="givenEmailId_WhenInvalid_ShouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.003"/>
+  <testcase name="givenMobileNumber_WhenValid_ShouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
   <testcase name="giveLastName_WhenSort_shouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
-  <testcase name="givenPassword_WhenValid_ShouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
-  <testcase name="giveFirstName_WhenValid_shouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
-  <testcase name="giveFirstName_WhenInvalid_shouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
+  <testcase name="givenPassword_WhenValid_ShouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
+  <testcase name="givenPassword_WhenOneUppercase_ShouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.0"/>
+  <testcase name="giveFirstName_WhenValid_shouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
+  <testcase name="giveFirstName_WhenInvalid_shouldReturnFalse" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
   <testcase name="giveLastName_WhenValid_shouldReturnTrue" classname="com.user_registration.UserRegistrationValidate" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
