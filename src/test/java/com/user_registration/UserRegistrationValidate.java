@@ -2,9 +2,6 @@ package com.user_registration;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
 
 
 public class UserRegistrationValidate {
@@ -20,9 +17,22 @@ public class UserRegistrationValidate {
         boolean result = validator.validateFirstName("Anubhav");
         Assert.assertEquals(true, result);
     }
+
+    @Test
+    public void giveFirstName_WhenValid2_shouldReturnTrue() {
+        boolean result = validator.validateFirstName("Anu");
+        Assert.assertEquals(true, result);
+    }
+
     @Test
     public void giveFirstName_WhenSort_shouldReturnFalse() {
         boolean result = validator.validateFirstName("An");
+        Assert.assertEquals(false, result);
+    }
+
+    @Test
+    public void giveFirstName_WhenAllSmall_shouldReturnFalse() {
+        boolean result = validator.validateFirstName("anubhav");
         Assert.assertEquals(false, result);
     }
 
