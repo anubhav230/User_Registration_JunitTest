@@ -81,5 +81,17 @@ public class UserRegistrationValidate {
         Assert.assertEquals(true, result);
     }
 
+    @Test
+    public void givenPassword_WhenAtLeastOneNumber_ShouldReturnTrue() {
+        boolean result = validator.validPassword("A1dffdgh");
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
+    public void givenPassword_WhenWithoutNumber_ShouldReturnTrue() {
+        boolean result = validator.validPassword("Addffdgh");
+        Assert.assertEquals(false, result);
+    }
+
 
 }
