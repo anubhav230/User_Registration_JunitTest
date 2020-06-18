@@ -69,5 +69,11 @@ public class UserRegistrationValidate {
         Assert.assertEquals(true, result);
     }
 
+    @Test
+    public void givenPassword_WhenValid_ShouldReturnTrue() {
+        boolean result = validator.validPassword("sdf123gh");
+        Assert.assertEquals(true, result);
+    }
+
 
 }
