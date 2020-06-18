@@ -53,14 +53,20 @@ public class UserRegistrationValidate {
         }
     }
 
+//    @Test
+//    public void givenEmailId_WhenProper_ShouldReturnTrue()
+//    {
+//        for (String email : validEmail)
+//        {
+//            boolean result = validator.validEmailId(email);
+//            Assert.assertEquals(true, result);
+//        }
+//    }
+
     @Test
-    public void givenEmailId_WhenProper_ShouldReturnTrue()
-    {
-        for (String email : validEmail)
-        {
-            boolean result = validator.validEmailId(email);
-            Assert.assertEquals(true, result);
-        }
+    public void givenMobileNumber_WhenValid_ShouldReturnTrue() {
+        boolean result = validator.validMobileNumber("91 9885616725");
+        Assert.assertEquals(true, result);
     }
 
 
