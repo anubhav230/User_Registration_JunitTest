@@ -10,7 +10,8 @@ public class UserRegistrationValidate {
 
     String validEmail[] = {"anubhavsingh230@gmail.com","abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
     String invalidEmail[] = {"abc","abc@.com.my","abc123@gmail.a","abc123@.com","abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com","abc.@gmail.com ","abc@abc@gmail.com","abc@gmail.com.1a","abc@gmail.com.aa.au"};
-
+    String validPassword[] = {"Sss$1sss","A444$444","AA1@AAAA","A@@@a1@@","A2222#22","@aAa1aaa"};
+    String invalidPassword[] = {"asdfdfdf","1111111111","$$$$$$$","wer","3456","11","----"};
 
     @Test
     public void giveFirstName_WhenValid_shouldReturnTrue() {
@@ -80,46 +81,25 @@ public class UserRegistrationValidate {
         Assert.assertEquals(true, result);
     }
 
+
     @Test
-    public void givenPassword_WhenValid_ShouldReturnTrue() {
-        boolean result = validator.validPassword("sdf123gh");
-        Assert.assertEquals(false, result);
+    public void givenPassword_WhenValid2_ShouldReturnTrue()
+    {
+        for (String email : validPassword)
+        {
+            boolean result = validator.validPassword(email);
+            Assert.assertEquals(true, result);
+        }
     }
 
     @Test
-    public void givenPassword_WhenOneUppercase_ShouldReturnFalse() {
-        boolean result = validator.validPassword("Sdf123gh");
-        Assert.assertEquals(false, result);
+    public void givenPassword_WhenInvalid_ShouldReturnFalse()
+    {
+        for (String email : invalidPassword)
+        {
+            boolean result = validator.validPassword(email);
+            Assert.assertEquals(false, result);
+        }
     }
-
-    @Test
-    public void givenPassword_WhenAtLeastOneNumber_ShouldReturnFalse() {
-        boolean result = validator.validPassword("A1dffdgh");
-        Assert.assertEquals(false, result);
-    }
-
-    @Test
-    public void givenPassword_WhenWithoutNumber_ShouldReturnFalse() {
-        boolean result = validator.validPassword("Addffdgh");
-        Assert.assertEquals(false, result);
-    }
-
-    @Test
-    public void givenPassword_WhenAtLeastOneSpacialCharacter_ShouldReturnTrue() {
-        boolean result = validator.validPassword("A@1ffdgh");
-        Assert.assertEquals(true, result);
-    }
-    @Test
-    public void givenPassword_WhenValidPassword2_ShouldReturnTrue() {
-        boolean result = validator.validPassword("A31f@dgh");
-        Assert.assertEquals(true, result);
-    }
-
-    @Test
-    public void givenPassword_WhenValidPassword3_ShouldReturnTrue() {
-        boolean result = validator.validPassword("A2222#22");
-        Assert.assertEquals(true, result);
-    }
-
 
 }
